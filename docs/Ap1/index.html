@@ -12,9 +12,9 @@
         <h1 id="tit-principal">Empresa de exemplo</h1>
         <nav id="nav-bar">
             <ul>
-                <li><a href="sec-servico">Serviços</a></li>
-                <li><a href="####"></a>Destinos</li>
-                <li><a href="####"></a>Contato</li>
+                <li><a href="#sec-servico">Serviços</a></li>
+                <li><a href="#sec-DP"></a>Destinos</li>
+                <li><a href="#sec-contato"></a>Contato</li>
             </ul>
         </nav>
     </header>
@@ -23,7 +23,7 @@
             <h2>Serviços</h2>
             <p>Oferecemos pacotes de viagens personalizados para atender às suas necessidades, garantindo experiências únicas e inesquecíveis. Escolha entre destinos incríveis e aproveite o melhor do turismo com conforto e segurança.</p>
         </section>
-        <section>
+        <section id="sec-DP">
             <h2>Destinos Populares</h2>
             <ul>
                 <li>Brasil</li>
@@ -32,24 +32,34 @@
             </ul>
         </section>
 
-        <form action="">
+        <section id="sec-contato">
+            <h2>Contato</h2>
+            <form action="">
+                <div class="form-group">
+                    <label for="nome">Nome: </label>
+                    <input type="text" id="nome" name="nome">
+                </div>
 
-            <label for="">Nome: </label>
-            <input type="text">
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email">
+                </div>
 
-            <label for="">Email: </label>
-            <input type="email">
+                <div class="form-group">
+                    <label for="mensagem">Mensagem: </label>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="30"></textarea>
+                </div>
 
-            <label for="">Mensagem: </label>
-            <input type="">
+                <button type="submit">Submit</button>
 
-            <button>Submit</button>
-
-        </form>
+            </form>
+        </section>
 
     </main>
     <footer>
-
+        <footer>
+            <p>&copy; 2025 Empresa de Exemplo. Todos os direitos reservados.</p>
+        </footer>
     </footer>
 </body>
 </html>
