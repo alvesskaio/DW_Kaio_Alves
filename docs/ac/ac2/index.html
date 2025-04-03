@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback para a página de perfil de [Seu nome]</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Feedback para a página de perfil do Kaio</h1>
+  </header>
 
+  <main>
+    <section id="feedback-form">
+      <h2>Formulário de Feedback</h2>
+      <form action="#">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+        </div>
+        <div class="form-group">
+          <label for="origem">Como você encontrou meu perfil?</label>
+          <select id="origem" name="origem">
+            <option value="google">Google</option>
+            <option value="midia-social">Mídia Social</option>
+            <option value="amigo">Amigo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="comentarios">Comentários ou Feedback:</label>
+          <textarea id="comentarios" name="comentarios" rows="4" placeholder="Seu comentário"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Você gostou do meu perfil?</label>
+          <label for="sim"><input type="radio" id="sim" name="gostou" value="sim"> Sim</label>
+          <label for="nao"><input type="radio" id="nao" name="gostou" value="nao"> Não</label>
+          <label for="talvez"><input type="radio" id="talvez" name="gostou" value="talvez"> Talvez</label>
+        </div>
+        <div class="form-group">
+          <label>O que você gostou no perfil?</label>
+          <label for="design"><input type="checkbox" id="design" name="gostou_item" value="design"> Design</label>
+          <label for="conteudo"><input type="checkbox" id="conteudo" name="gostou_item" value="conteudo"> Conteúdo</label>
+          <label for="facilidade"><input type="checkbox" id="facilidade" name="gostou_item" value="facilidade"> Facilidade de uso</label>
+          <label for="outros"><input type="checkbox" id="outros" name="gostou_item" value="outros"> Outros</label>
+        </div>
+        <button type="submit">Enviar</button>
+        <button type="reset">Redefinir</button>
+      </form>
+    </section>
+
+    <section id="multimedia">
+      <h2>Vídeo e Áudio</h2>
+      <div class="video">
+        <h3>Vídeo Introdução</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1AfpBxsbGX4?si=F60LZgAISKo7eaPt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
+      <div class="audio">
+        <h3>Música Favorita</h3>
+        <audio controls>
+          <source src="Numb.mp3" type="audio/mp3">
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Obrigado pelo seu feedback!</p>
+  </footer>
+</body>
+</html>
