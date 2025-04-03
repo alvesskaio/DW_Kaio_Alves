@@ -1,85 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP1</title>
+    <title>EcoTour Brasil</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <header>
-        <h1 id="tit-principal">Empresa de exemplo</h1>
-        <nav id="nav-bar">
+        <h1>EcoTour Brasil</h1>
+        <nav>
             <ul>
                 <li><a href="#sec-servico">Serviços</a></li>
-                <li><a href="#sec-DP"></a>Destinos</li>
-                <li><a href="#sec-contato"></a>Contato</li>
+                <li><a href="#sec-destinos">Destinos</a></li>
+                <li><a href="#sec-contato">Contato</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
+        <!-- Seção de Serviços -->
         <section id="sec-servico">
             <h2>Serviços</h2>
             <p>Oferecemos pacotes de viagens personalizados para atender às suas necessidades, garantindo experiências únicas e inesquecíveis. Escolha entre destinos incríveis e aproveite o melhor do turismo com conforto e segurança.</p>
         </section>
-        <section id="sec-DP">
+
+        <!-- Seção de Destinos Populares -->
+        <section id="sec-destinos">
             <h2>Destinos Populares</h2>
             <ul>
-                <li>Brasil</li>
-                <li>China</li>
-                <li>EUA</li>
+                <li>Fernando de Noronha</li>
+                <li>Chapada Diamantina</li>
+                <li>Rio de Janeiro</li>
             </ul>
         </section>
 
+        <!-- Seção de Formulário de Contato -->
         <section id="sec-contato">
             <h2>Contato</h2>
-            <form action="">
+            <form action="#">
                 <div class="form-group">
-                    <label for="nome">Nome: </label>
-                    <input type="text" id="nome" name="nome">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email: </label>
-                    <input type="email" id="email" name="email">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="mensagem">Mensagem: </label>
-                    <textarea id="mensagem" name="mensagem" rows="5" cols="30"></textarea>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
                 </div>
 
-                <button type="submit">Submit</button>
-
+                <button type="submit">Enviar</button>
             </form>
         </section>
-
     </main>
+
+    <!-- Rodapé -->
     <footer>
-        <footer>
-            <p>&copy; 2025 Empresa de Exemplo. Todos os direitos reservados.</p>
-        </footer>
+        <p>&copy; 2025 EcoTour Brasil. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
