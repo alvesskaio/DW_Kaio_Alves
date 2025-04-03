@@ -8,24 +8,23 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #eaf0f1;
+    background-color: #f1f1f1;
     color: #333;
-    padding: 0 10px;  /* Adicionando espaçamento nas laterais */
+    padding: 0 10px;
 }
 
 /* Estilo para o cabeçalho */
 header {
-    background-color: #00796b; /* Cor mais vibrante */
+    background-color: #00796b;
     color: #fff;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
 header h1 {
-    font-size: 35px;
+    font-size: 2rem;
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
@@ -35,7 +34,7 @@ header nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;  /* Aumentando o espaço entre os itens */
+    gap: 2rem;
 }
 
 header nav ul li {
@@ -45,8 +44,8 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
-    padding: 12px;
+    font-size: 1.2rem;
+    padding: 0.6rem;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
 }
@@ -60,9 +59,9 @@ header nav ul li a:hover {
 main section {
     background-color: #fff;
     color: #333;
-    padding: 30px;
-    margin: 20px auto;
-    width: 80%;
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 90%;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -74,30 +73,36 @@ main section:hover {
 }
 
 main section h2 {
-    font-size: 28px;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #004d40;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-main section ul {
-    list-style-type: none;
-    padding-left: 0;
+/* Tabela Responsiva */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-main section ul li {
-    font-size: 18px;
-    margin: 12px 0;
-    padding-left: 25px;
-    position: relative;
+table, th, td {
+    border: 1px solid #ccc;
 }
 
-main section ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #00796b;
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #00796b;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
 }
 
 /* Estilo para o formulário */
@@ -106,24 +111,24 @@ form {
     margin: 20px auto;
     width: 80%;
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 label {
-    font-size: 18px;
+    font-size: 1.2rem;
     margin-bottom: 8px;
     display: inline-block;
 }
 
 input, textarea {
-    padding: 14px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 1rem;
     width: 100%;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -138,12 +143,12 @@ input:focus, textarea:focus {
 button[type="submit"] {
     background-color: #00796b;
     color: white;
-    font-size: 20px;
-    padding: 15px;
+    font-size: 1.2rem;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 10px;
     transition: background-color 0.3s ease;
     width: 100%;
 }
@@ -152,55 +157,44 @@ button[type="submit"]:hover {
     background-color: #004d40;
 }
 
-/* Estilo para o rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 25px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
 /* Responsividade - Ajustes para dispositivos móveis */
-@media (max-width: 390px) {
+@media (max-width: 900px) {
     header nav ul {
         flex-direction: column;
-        gap: 15px;
+        gap: 1rem;
     }
 
     main section {
         width: 95%;
-        padding: 20px;
+        padding: 15px;
     }
 
     button[type="submit"] {
         width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
     }
 
     header {
         padding: 15px;
     }
 
-    label, input, textarea {
-        font-size: 16px;
-    }
-
-    main section h2 {
-        font-size: 22px;
-    }
-}
-
-@media (max-width: 480px) {
     main section {
         width: 100%;
-        padding: 15px;
+        padding: 10px;
     }
 
-    header nav ul li {
-        font-size: 16px;
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    button[type="submit"] {
+        width: 100%;
     }
 }

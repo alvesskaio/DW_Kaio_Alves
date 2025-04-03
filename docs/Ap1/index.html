@@ -28,11 +28,32 @@
         <!-- Seção de Destinos Populares -->
         <section id="sec-destinos">
             <h2>Destinos Populares</h2>
-            <ul>
-                <li>Fernando de Noronha</li>
-                <li>Chapada Diamantina</li>
-                <li>Rio de Janeiro</li>
-            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fernando de Noronha</td>
+                        <td>Paraíso natural com águas cristalinas.</td>
+                        <td>R$ 7.000</td>
+                    </tr>
+                    <tr>
+                        <td>Chapada Diamantina</td>
+                        <td>Trilhas e cachoeiras no coração da Bahia.</td>
+                        <td>R$ 2.500</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td>Praias, montanhas e cultura vibrante.</td>
+                        <td>R$ 4.000</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <!-- Seção de Formulário de Contato -->
@@ -41,12 +62,17 @@
             <form action="#">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required minlength="3">
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" pattern="\(\d{2}\) \d{5}-\d{4}" required>
                 </div>
 
                 <div class="form-group">
@@ -59,7 +85,6 @@
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 EcoTour Brasil. Todos os direitos reservados.</p>
     </footer>
