@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+}
+.static-box {
+    width:500px;
+    height: 100px;
+    background-color: lightblue;
+    position: static;
+}
+.relative-box {
+    width: 200px;
+    height: 100px;
+    background-color: lightgreen;
+    position: relative;
+    top: 20px; /* Movido 20px para baixo */
+    left: 15px; /* Movido 15px para a direita */
+}
+.parent {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    top: 30px;
+}
+.absolute-top-1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 130px;
+    height: 85px;
+    background-color: salmon;
+}
+.absolute-top-2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 130px;
+    height: 85px;
+    background-color: salmon;
+}
+.absolute-botton-1 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 130px;
+    height: 85px;
+    background-color: salmon;
+}
+
+.absolute-botton-2 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 130px;
+    height: 85px;
+    background-color: salmon;
+}
+
+.fixed-box {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    background-color: yellow;
+}
+
+.sticky-box {
+    position: sticky;
+    top: 0; /* Fica "preso" no topo após rolar */
+    background-color: lightcoral;
+    padding: 10px;
+}
