@@ -1,0 +1,25 @@
+[
+{
+    "nome": "Smartphone XYZ",
+    "preco": 1299.99
+},
+{
+    "nome": "Notebook Ultra",
+    "preco": 4599.90
+},
+{
+    "nome": "Tênis Esportivo",
+    "preco": 239.90
+},
+{
+    "nome": "Cafeteira Elétrica",
+    "preco": 189.99
+},
+{
+    "nome": "Livro de Programação Web",
+    "preco": 79.90
+},
+{
+    "nome": "Fones de Ouvido Bluetooth",
+    "preco": 159.99
+}]
