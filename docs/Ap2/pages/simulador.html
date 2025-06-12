@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulador interativo para calcular investimentos e planejar seu futuro financeiro">
+    <title>Simulador | Investimentos Inteligente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Skip Link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header role="banner">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-chart-line"></i> Investimentos Inteligentes
+            </a>
+            <nav role="navigation" aria-label="Menu principal">
+                <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Alternar menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu" id="primary-menu" role="menubar">
+                    <li role="none"><a href="../index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="simulador.html" class="active" role="menuitem" aria-current="page">Simulador</a></li>
+                    <li role="none"><a href="economia.html" role="menuitem">Economia</a></li>
+                    <li role="none"><a href="investimentos.html" role="menuitem">Investimentos</a></li>
+                    <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Simulador de Investimentos</h1>
+                <p>Responda às perguntas para receber recomendações personalizadas.</p>
+            </div>
+        </section>
+
+        <section class="simulator">
+            <div class="container">
+                <div class="simulation-container">
+                    <!-- Progress Tracker -->
+                    <div class="progress-tracker">
+                        <div class="progress-step active" aria-label="Passo 1" data-step="1">1</div>
+                        <div class="progress-step" aria-label="Passo 2" data-step="2">2</div>
+                        <div class="progress-step" aria-label="Passo 3" data-step="3">3</div>
+                        <div class="progress-step" aria-label="Resultado" data-step="4">4</div>
+                    </div>
+
+                    <div class="slides-container">
+                        <!-- Slide 1: Perfil do Investidor -->
+                        <div class="slide active" id="slide-1" aria-labelledby="slide1-heading">
+                            <h2 id="slide1-heading" class="mb-3">Qual é o seu perfil de investidor?</h2>
+                            <div class="options-container">
+                                <div class="option">
+                                    <input type="radio" id="perfil-1" name="perfil" value="conservador">
+                                    <label for="perfil-1">Conservador</label>
+                                    <p>Prefiro segurança, mesmo com rendimentos menores.</p>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="perfil-2" name="perfil" value="moderado">
+                                    <label for="perfil-2">Moderado</label>
+                                    <p>Aceito algum risco para obter rendimentos melhores.</p>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="perfil-3" name="perfil" value="arrojado">
+                                    <label for="perfil-3">Arrojado</label>
+                                    <p>Busco altos rendimentos, mesmo com riscos maiores.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Valor a Investir -->
+                        <div class="slide" id="slide-2" aria-labelledby="slide2-heading">
+                            <h2 id="slide2-heading" class="mb-3">Quanto você pretende investir inicialmente?</h2>
+                            <div class="form-group">
+                                <label for="valor-inicial" class="form-label">Valor inicial (R$)</label>
+                                <input type="number" id="valor-inicial" min="100" placeholder="Ex: 1000" class="form-control">
+
+                                <label for="aporte-mensal" class="form-label mt-3">Aporte mensal (R$, opcional)</label>
+                                <input type="number" id="aporte-mensal" min="0" placeholder="Ex: 200" class="form-control">
+
+                                <label for="tempo-investimento" class="form-label mt-3">Por quanto tempo? (meses)</label>
+                                <input type="number" id="tempo-investimento" min="1" placeholder="Ex: 36" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Tipos de Investimento -->
+                        <div class="slide" id="slide-3" aria-labelledby="slide3-heading">
+                            <h2 id="slide3-heading" class="mb-3">Quais investimentos mais te interessam?</h2>
+                            <div class="options-container">
+                                <div class="option">
+                                    <input type="checkbox" id="tipo-1" name="tipo" value="renda-fixa">
+                                    <label for="tipo-1">Renda Fixa</label>
+                                    <p>Investimentos com rendimento previsível como títulos públicos e CDBs</p>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="tipo-2" name="tipo" value="acoes">
+                                    <label for="tipo-2">Ações</label>
+                                    <p>Participação em empresas listadas na bolsa de valores</p>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="tipo-3" name="tipo" value="fundos">
+                                    <label for="tipo-3">Fundos de Investimento</label>
+                                    <p>Aplicações geridas por profissionais com diversificação de ativos</p>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="tipo-4" name="tipo" value="tesouro">
+                                    <label for="tipo-4">Tesouro Direto</label>
+                                    <p>Títulos da dívida pública federal com diferentes perfis</p>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="tipo-5" name="tipo" value="cripto">
+                                    <label for="tipo-5">Criptomoedas</label>
+                                    <p>Ativos digitais baseados em tecnologia blockchain</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Resultados -->
+                        <div class="slide" id="slide-4" aria-labelledby="slide4-heading">
+                            <h2 id="slide4-heading" class="mb-3">Resultados da sua simulação</h2>
+                            <div class="results-container">
+                                <div class="results-summary">
+                                    <p>Com base no seu perfil e preferências, recomendamos:</p>
+                                    <div class="recommendation"></div>
+                                </div>
+
+                                <div class="chart-container">
+                                    <canvas id="investment-chart"></canvas>
+                                </div>
+
+                                <div class="estimated-returns">
+                                    <h3>Retornos estimados</h3>
+                                    <div class="returns-grid">
+                                        <!-- Será preenchido via JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button class="btn btn-outline prev-slide" disabled>Anterior</button>
+                        <button class="btn btn-primary next-slide">Próximo</button>
+                        <button class="btn btn-secondary submit-simulation" style="display:none;">Ver resultados</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-col">
+                <h3>Sobre o Site</h3>
+                <p>Simulador de Investimentos Inteligente é uma ferramenta educacional para ajudar na tomada de decisões financeiras.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="economia.html">Economia</a></li>
+                    <li><a href="investimentos.html">Investimentos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Simulador de Investimentos Inteligente. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js" type="module"></script>
+    <script src="../assets/js/slides.js" type="module"></script>
+    <script src="../assets/js/chart.js" type="module"></script>
+    <script src="../assets/js/api.js" type="module"></script>
+    <script src="../assets/js/accessibility.js"></script>
+
+    <script type="module">
+        // Script específico para o simulador
+        import { initializeSimulatorWithRealData } from '../assets/js/api.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializa o simulador com dados reais
+            initializeSimulatorWithRealData();
+        });
+    </script>
+</body>
+</html>

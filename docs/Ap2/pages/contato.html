@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com nossa equipe para tirar dúvidas sobre investimentos">
+    <title>Contato | Investimentos Inteligente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Skip Link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header role="banner">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-chart-line"></i> Investimentos Inteligentes
+            </a>
+            <nav role="navigation" aria-label="Menu principal">
+                <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Alternar menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu" id="primary-menu" role="menubar">
+                    <li role="none"><a href="../index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="simulador.html" role="menuitem">Simulador</a></li>
+                    <li role="none"><a href="economia.html" role="menuitem">Economia</a></li>
+                    <li role="none"><a href="investimentos.html" role="menuitem">Investimentos</a></li>
+                    <li role="none"><a href="contato.html" class="active" role="menuitem" aria-current="page">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Entre em Contato</h1>
+                <p>Envie sua mensagem, dúvida ou sugestão</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h2>Email</h2>
+                        <p>contato@simuladorinteligente.com.br</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h2>Telefone</h2>
+                        <p>(21) 99999-9999</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h2>Horário de Atendimento</h2>
+                        <p>Segunda a Sexta: 9h às 18h</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="container">
+                <div class="contact-form">
+                    <h2 class="mb-4">Formulário de Contato</h2>
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nome completo *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Digite seu nome completo" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="exemplo@email.com" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="(DDD) 99999-9999">
+                            <span class="error-message" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Assunto *</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="" disabled selected>Selecione um assunto</option>
+                                <option value="duvida">Dúvida sobre investimentos</option>
+                                <option value="sugestao">Sugestão para o simulador</option>
+                                <option value="problema">Problema técnico</option>
+                                <option value="outro">Outro assunto</option>
+                            </select>
+                            <span class="error-message" id="subject-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensagem *</label>
+                            <textarea id="message" name="message" rows="6" class="form-control" placeholder="Digite sua mensagem aqui..." required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+
+                        <div class="form-group form-check">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Concordo com a <a href="#">Política de Privacidade</a> *</label>
+                            <span class="error-message" id="privacy-error"></span>
+                        </div>
+
+                        <div class="form-submit mt-4">
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        </div>
+
+                        <div class="form-status" id="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-col">
+                <h3>Sobre o Site</h3>
+                <p>Simulador de Investimentos Inteligente é uma ferramenta educacional para ajudar na tomada de decisões financeiras.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="economia.html">Economia</a></li>
+                    <li><a href="investimentos.html">Investimentos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Simulador de Investimentos Inteligente. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js" type="module"></script>
+    <script src="../assets/js/form.js" type="module"></script>
+    <script src="../assets/js/accessibility.js"></script>
+</body>
+</html>

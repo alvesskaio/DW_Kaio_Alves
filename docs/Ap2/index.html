@@ -1,1 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulador de Investimentos Inteligente - Compare opções e descubra os melhores investimentos para seu perfil">
+    <title>Simulador de Investimentos Inteligente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Skip Link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
+    <header role="banner">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-chart-line"></i> Investimentos Inteligentes
+            </a>
+            <nav role="navigation" aria-label="Menu principal">
+                <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Alternar menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu" id="primary-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="active" role="menuitem" aria-current="page">Home</a></li>
+                    <li role="none"><a href="pages/simulador.html" role="menuitem">Simulador</a></li>
+                    <li role="none"><a href="pages/economia.html" role="menuitem">Economia</a></li>
+                    <li role="none"><a href="pages/investimentos.html" role="menuitem">Investimentos</a></li>
+                    <li role="none"><a href="pages/contato.html" role="menuitem">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>Planeje seu futuro financeiro com inteligência</h1>
+                <p>Use nosso simulador para descobrir as melhores opções de investimento para o seu perfil.</p>
+                <div class="hero-buttons">
+                    <a href="pages/simulador.html" class="btn btn-secondary">Começar Simulação</a>
+                    <a href="pages/investimentos.html" class="btn btn-outline">Conhecer Investimentos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Por que usar nosso simulador?</h2>
+                    <p>Conheça os benefícios de planejar seus investimentos com nossa ferramenta.</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Análise Personalizada</h3>
+                        <p>Recomendações baseadas no seu perfil de investidor, objetivos financeiros e tolerância a riscos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Resultados Rápidos</h3>
+                        <p>Simulações detalhadas em poucos minutos, com gráficos intuitivos e recomendações claras.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Total Segurança</h3>
+                        <p>Seus dados estão protegidos e são usados apenas para a simulação, sem compartilhamento com terceiros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="indicators">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Indicadores Econômicos</h2>
+                    <p>Acompanhe os principais indicadores do mercado em tempo real</p>
+                </div>
+                <div class="real-time-panel">
+                    <button id="refresh-indicators" class="btn btn-outline btn-sm">
+                        <i class="fas fa-sync-alt"></i> Atualizar Agora
+                    </button>
+                    <span class="auto-refresh-indicator">
+                        <i class="fas fa-clock"></i> Atualização automática a cada 5 minutos
+                    </span>
+                </div>
+                <div class="indicators-grid">
+                    <div class="indicator-card">
+                        <h3 class="indicator-title">Taxa Selic</h3>
+                        <div class="indicator-value" id="selic-value">
+                            <div class="loading-animation"></div>
+                        </div>
+                        <p class="indicator-desc">Taxa básica de juros da economia</p>
+                    </div>
+                    <div class="indicator-card">
+                        <h3 class="indicator-title">IPCA (12 meses)</h3>
+                        <div class="indicator-value" id="ipca-value">
+                            <div class="loading-animation"></div>
+                        </div>
+                        <p class="indicator-desc">Índice oficial de inflação do Brasil</p>
+                    </div>
+                    <div class="indicator-card">
+                        <h3 class="indicator-title">CDI</h3>
+                        <div class="indicator-value" id="cdi-value">
+                            <div class="loading-animation"></div>
+                        </div>
+                        <p class="indicator-desc">Certificado de Depósito Interbancário</p>
+                    </div>
+                    <div class="indicator-card">
+                        <h3 class="indicator-title">PIB (variação)</h3>
+                        <div class="indicator-value" id="pib-value">
+                            <div class="loading-animation"></div>
+                        </div>
+                        <p class="indicator-desc">Produto Interno Bruto</p>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="pages/economia.html" class="btn btn-primary">Ver Mais Indicadores</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Pronto para começar?</h2>
+                    <p>Descubra os melhores investimentos para seu perfil agora mesmo.</p>
+                </div>
+                <div class="text-center">
+                    <a href="pages/simulador.html" class="btn btn-secondary">Iniciar Simulação</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-col">
+                <h3>Sobre o Site</h3>
+                <p>Simulador de Investimentos Inteligente é uma ferramenta educacional para ajudar na tomada de decisões financeiras.</p>
+                <p>Nosso objetivo é democratizar o conhecimento sobre investimentos e finanças pessoais.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/simulador.html">Simulador</a></li>
+                    <li><a href="pages/economia.html">Economia</a></li>
+                    <li><a href="pages/investimentos.html">Investimentos</a></li>
+                    <li><a href="pages/contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Simulador de Investimentos Inteligente. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script no final da página -->
+    <script src="assets/js/main.js" type="module"></script>
+    <script src="assets/js/api.js" type="module"></script>
+    <script src="assets/js/accessibility.js"></script>
+
+    <script type="module">
+        import { updateEconomicIndicators } from './assets/js/api.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Atualiza os indicadores econômicos
+            updateEconomicIndicators();
+
+            // Configura o botão de atualização manual
+            const refreshButton = document.getElementById('refresh-indicators');
+            if (refreshButton) {
+                refreshButton.addEventListener('click', function() {
+                    // Visual de carregamento
+                    this.disabled = true;
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Atualizando...';
+
+                    updateEconomicIndicators().then(() => {
+                        // Restaura o botão
+                        this.disabled = false;
+                        this.innerHTML = '<i class="fas fa-sync-alt"></i> Atualizar Agora';
+
+                        // Adiciona efeito de destaque aos valores atualizados
+                        document.querySelectorAll('.indicator-value').forEach(el => {
+                            el.classList.add('updated-value');
+                            setTimeout(() => el.classList.remove('updated-value'), 2000);
+                        });
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+            setInterval(() => {
+                updateEconomicIndicators();
+            }, 300000);
+        });
+    </script>
+</body>
+</html>
